@@ -1,0 +1,34 @@
+.user-wrapper {
+  display: flex;
+  justify-content: space-between;
+
+  img {
+    border-radius: 50%;
+  }
+
+  .email-wrapper {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    max-width: 200px;
+  }
+}
+
+.payemt-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.country-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .left-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 70%;
+    text-align: left;
+  }
+}

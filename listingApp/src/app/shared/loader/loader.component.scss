@@ -1,0 +1,11 @@
+.white-overlay {
+    background: rgba(black, 0.5);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 9999;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

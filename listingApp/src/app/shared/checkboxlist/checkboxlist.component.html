@@ -1,0 +1,29 @@
+<mat-selection-list #shoes color="primary" [multiple]="true" >
+ 
+    <mat-list-option *ngFor="let obj of list | filterPipe: searchTerm" togglePosition="before">
+        <div class="user-wrapper" *ngIf="component=='user'">
+            <div><span>{{obj.firstName}}</span><span>{{obj.lastName}}</span>
+                <div class="email-wrapper">{{obj.email}}</div>
+            </div>
+                   
+                    <div class="avatar-wrapper">
+            <img [src]="obj.avatarUrl" [alt]="obj.avatarUrl" width="50" height="50">
+
+                    </div>
+        </div>
+        <div class="payemt-wrapper"  *ngIf="component=='payment'">
+            <div><span>{{obj.status | camelCase}}</span> </div>
+            <div><span class="primary">{{obj.count}}</span></div>
+        </div>
+        <div class="country-wrapper"  *ngIf="component=='country'">
+            <div class="left-container">
+                <img [src]="obj.flag" [alt]="obj.name" width="30" height="30">
+                <div class="primary">{{obj.name}}</div> <div class="mat-purple-50">.{{obj.code}}</div>
+            </div>
+           
+            
+            <div class="primary">+{{obj.someWeirdServerFieldNameWithCount}}</div>
+        </div>
+    </mat-list-option>
+
+</mat-selection-list>

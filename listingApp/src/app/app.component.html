@@ -1,0 +1,32 @@
+
+<mat-drawer-container class="example-container" autosize>
+  <mat-toolbar color="primary">
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon" (click)="drawer.toggle()">
+      <mat-icon >menu</mat-icon>
+    </button>
+    <span>Recruitment Task</span>
+    <span class="example-spacer"></span>
+    <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+      <mat-icon>favorite</mat-icon>
+    </button>
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+      <mat-icon>share</mat-icon>
+    </button>
+  </mat-toolbar>
+  <mat-drawer #drawer class="sidenav" mode="side">
+    <mat-nav-list>
+      <a mat-list-item routerLink="users">User</a>
+      <a mat-list-item routerLink="payments">Payment</a>
+      <a mat-list-item routerLink="countries">Countries</a>
+    </mat-nav-list>
+  </mat-drawer>
+ <!-- component navigation happens here -->
+  <div class="sidenav-content">
+   <router-outlet></router-outlet>
+
+  </div>
+
+  
+</mat-drawer-container>
+
+<app-loader></app-loader>
